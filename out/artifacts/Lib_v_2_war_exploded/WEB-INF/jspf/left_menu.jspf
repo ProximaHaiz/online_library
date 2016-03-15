@@ -1,0 +1,15 @@
+<%@ page import="online_lib.beans.Genre" %>
+<%@ page pageEncoding="UTF-8" %>
+<div class="sidebar1">
+    <h4>Жанры:</h4>
+    <ul class="nav">
+        <jsp:useBean id="genreList" class="online_lib.beans.GenreList" scope="application"/>
+        <%
+            for (Genre genre : genreList.getGenreList()) {
+        %>
+        <li><a href="books.jsp?genre_id=<%=genre.getId()%>&name=<%=genre.getGenreName()%>"><%=genre.getGenreName()%>
+        </a></li>
+
+        <%}%>
+    </ul>
+</div>
