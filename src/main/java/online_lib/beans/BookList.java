@@ -10,12 +10,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import java.util.stream.Collectors;
 
 /**
  * Created by Proxima on 14.03.2016.
  */
-public class BookList  {
+public class BookList {
     private List<Book> bookList = new ArrayList<>();
 
     public BookList() {
@@ -67,17 +66,13 @@ public class BookList  {
         }
     }
 
-    public List<Book> getBooksByGenre(long id) {
-     return getBooks(""+
-             "select b.id,b.name," +
-             "b.isbn,b.page_count," +
-             "b.publish_year, p.name as publisher," +
-             " a.fio as author, g.name as genre," +
-             " b.image from book b "
-             + "inner join author a on b.author_id=a.id "
-             + "inner join genre g on b.genre_id=g.id "
-             + "inner join publisher p on b.publisher_id=p.id "
-             + "where genre_id=" + id + " order by b.name "
-             + "limit 0,5");
+    public List<Book> getBooksByGenre(long id) {;
+        return getBooks("select b.id,b.name,b.isbn,b.page_count,b.publish_year, p.name as publisher, a.fio as author, g.name as genre, b.image from book b "
+                + "inner join author a on b.author_id=a.id "
+                + "inner join genre g on b.genre_id=g.id "
+                + "inner join publisher p on b.publisher_id=p.id "
+                + "where genre_id=" + id + " order by b.name "
+                + "limit 0,5");
+
     }
 }

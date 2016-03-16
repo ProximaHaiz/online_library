@@ -12,7 +12,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Онлайн библиотека</title>
-    <link href="../css/style_main.css" rel="stylesheet" type="text/css">
+    <link href="web/css/style_main.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 
@@ -21,7 +21,7 @@
 
     <div class="header">
         <div class="logo">
-            <img src="../images/library.png" alt="Логотип" name="logo"/>
+            <img src="web/images/library.png" alt="Логотип" name="logo"/>
 
         </div>
         <div class="descr">

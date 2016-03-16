@@ -1,7 +1,5 @@
 package online_lib.beans;
 
-import java.util.Date;
-
 /**
  * Created by Proxima on 14.03.2016.
  */
@@ -13,7 +11,7 @@ public class Book {
     private String isbn;
     private String genre;
     private String author;
-    private int publich_Date;
+    private int publishDate;
     private String publisher;
     private byte[] image;
 
@@ -30,7 +28,7 @@ public class Book {
         this.isbn = isbn;
         this.genre = genre;
         this.author = author;
-        this.publich_Date = publich_Year;
+        this.publishDate = publich_Year;
         this.publisher = publisher;
         this.image = image;
     }
@@ -93,12 +91,12 @@ public class Book {
         this.pageCount = pageCount;
     }
 
-    public int getPublich_Date() {
-        return publich_Date;
+    public int getPublish_Date() {
+        return publishDate;
     }
 
     public void setPublich_Date(int publich_Date) {
-        this.publich_Date = publich_Date;
+        this.publishDate = publich_Date;
     }
 
     public byte[] getImage() {

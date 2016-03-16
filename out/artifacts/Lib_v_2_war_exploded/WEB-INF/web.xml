@@ -5,6 +5,15 @@
 		  http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
          version="3.0">
 
+    <servlet>
+        <servlet-name>ShowImage</servlet-name>
+        <servlet-class>online_lib.servlets.ShowImage</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ShowImage</servlet-name>
+        <url-pattern>/ShowImage</url-pattern>
+    </servlet-mapping>
     <!--закрытие сессии через 30 после бездействия-->
     <session-config>
         <session-timeout>30</session-timeout>

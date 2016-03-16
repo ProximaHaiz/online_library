@@ -15,18 +15,17 @@ import java.util.logging.Logger;
  * Created by Proxima on 14.03.2016.
  */
 public class GenreList {
-    private List<Genre> genreList;
+    private List<Genre> genreList = new ArrayList<>();
 
 
-    private void getData() {
+    private List<Genre> getGenres() {
         Connection conn = null;
         Statement stmt = null;
         ResultSet rs = null;
-        genreList = new ArrayList<Genre>();
         try {
             conn = DbConnection.getConnection();
             stmt = conn.createStatement();
-            rs = stmt.executeQuery("SELECT g.name FROM genre g ORDER BY g.name ");
+            rs = stmt.executeQuery("SELECT * FROM genre  ORDER BY name ");
             while (rs.next()) {
                 genreList.add(new Genre(rs.getString("name"), rs.getLong("id")));
             }
@@ -44,13 +43,14 @@ public class GenreList {
                 e.printStackTrace();
             }
         }
+        return genreList;
     }
 
     public List<Genre> getGenreList() {
-        if (!genreList.isEmpty()){
+        if (!genreList.isEmpty()) {
             return genreList;
-        }else {
-
+        } else {
+            return getGenres();
         }
     }
 }

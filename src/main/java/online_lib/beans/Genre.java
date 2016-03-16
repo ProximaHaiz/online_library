@@ -1,18 +1,16 @@
 package online_lib.beans;
 
-/**
- * Created by Proxima on 14.03.2016.
- */
 public class Genre {
-    private String genreName;
+
+    private String name;
     private long id;
 
-    public void setGenreName(String genreName) {
-        this.genreName = genreName;
+    public Genre() {
     }
 
-    public String getGenreName() {
-        return genreName;
+    public Genre(String name, long id) {
+        this.name = name;
+        this.id = id;
     }
 
     public long getId() {
@@ -23,13 +21,16 @@ public class Genre {
         this.id = id;
     }
 
-    public Genre() {
+
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
 
-    public Genre(String genreName, long id) {
-        this.id = id;
-        this.genreName = genreName;
-    }
 
 }

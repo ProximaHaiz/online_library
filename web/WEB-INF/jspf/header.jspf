@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Онлайн библиотека</title>
-    <link href=" /css/style_main.css" rel="stylesheet" type="text/css">
+    <link href="../css/style_main.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 
@@ -11,11 +11,11 @@
 
     <div class="header">
         <div class="logo">
-            <img src="/images/library.png" alt="Логотип" name="logo"/>
+            <img src="../images/library.png" alt="Логотип" name="logo"/>
 
         </div>
         <div class="descr">
-            <h3>Онлайн библиотека проекта javabegin.ru</h3>
+            <h3>Онлайн библиотека проекта ProximaHaiz</h3>
         </div>
         <div class="search_form">
             <form name="search_form" method="POST">
@@ -28,4 +28,3 @@
             </form>
         </div>
     </div>
-</div>
